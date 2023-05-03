@@ -3,8 +3,251 @@
     padding: 0;
     box-sizing: inherit;
 }
-
+:root {
+    --primary: #38aecc;
+    --primay-dark: #022f40;
+    --primary-light: #92e3f7;
+    --secondary: #89dd55;
+    --secondary-light: #cdffae;
+}
 html {
-    font-size: 62.5%;
     box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: serif;
+    line-height: 1.6;
+    color: #fff;
+    background-image: linear-gradient(
+        180deg,
+        var(--primary) 0%,
+        var(--primary-light) 100%
+    );
+}
+.container {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 350px;
+    height: 235px;
+    position: relative;
+    background: rgb(248, 255, 237);
+    padding: 25px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-header span:first-child {
+    word-break: break-all;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 135%;
+    color: rgb(0, 19, 36);
+}
+
+.card-header span:last-child {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 135%;
+    color: #1f93f8;
+}
+
+.counter {
+    position: absolute;
+    left: 25px;
+    top: 36px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 77px;
+    color: #1f93f8;
+}
+
+.remaining {
+    position: absolute;
+    left: 30px;
+    top: 12px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #022f40;
+}
+
+.data-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.per-day {
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(17, 29, 40);
+}
+.per-day span {
+    color: #1f93f8;
+}
+
+.day-left {
+    position: absolute;
+    right: 30px;
+    top: 120px;
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(17, 29, 40);
+}
+.day-left span {
+    color: #1f93f8;
+}
+
+.btn:link,
+.btn,
+:visited {
+    position: absolute;
+    left: 120px;
+    bottom: 12px;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 20px;
+    background: #1f93f8;
+    outline: none;
+    border: #fff;
+    border-radius: 9px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+    transform: translateX(1.2);
+    background: #055dab;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem auto;
+    align-items: center;
+    border-top: 1px solid #000;
+    padding: 2rem 0;
+    max-width: 100rem;
+}
+.social-links {
+    display: flex;
+    font-size: 3rem;
+    list-style: none;
+    gap: 3rem;
+}
+.copyright {
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+.social-icon {
+    color: #777;
+}
+.social-icon:hover,
+.social-icon:active {
+    color: #426eff;
+}
+.footer_span {
+    font-size: 2rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Media query */
+@media screen and (max-width: 480px) {
+    .container {
+        height: 90vh;
+    }
+    .card {
+        padding: 0px;
+        width: 340px;
+        height: 650px;
+        margin: 20px auto;
+    }
+    .card-header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+    .card-header span:first-child {
+        font-size: 26px;
+    }
+
+    .dates {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .card-header span:last-child {
+        font-size: 26px;
+        color: #e7fffe;
+    }
+    .remaining {
+        top: 130px;
+        left: 90px;
+        font-weight: 600;
+        font-size: 36px;
+    }
+    .counter {
+        top: 190px;
+        left: 100px;
+        font-weight: 800;
+        font-size: 64px;
+        color: #fff;
+    }
+    .data-container {
+        height: 300px;
+        align-items: start;
+        background-image: linear-gradient(180deg, #00ccff 0%, #039bc1 100%);
+        border-radius: 25px 25px 100px 100px;
+    }
+    .per-day {
+        top: 300px;
+        left: 50px;
+        font-weight: 600;
+        font-size: 36px;
+    }
+    .per-day span {
+        font-size: 56px;
+    }
+    .day-left {
+        top: 380px;
+        left: 50px;
+        font-weight: 600;
+        font-size: 36px;
+    }
+    .day-left span {
+        font-size: 56px;
+    }
+    .btn:link,
+    .btn,
+    :visited {
+        left: 75px;
+        bottom: 60px;
+        font-weight: 500;
+        font-size: 24px;
+        padding: 20px 35px;
+    }
+    .copyright {
+        margin: 2rem 0;
+        font-size: 1rem;
+    }
 }
