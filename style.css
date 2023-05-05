@@ -170,8 +170,8 @@ body {
 /* Media query */
 @media screen and (max-width: 480px) {
     .container {
-        height: 90vh;
-        margin: 40px auto;
+        height: 80vh;
+        margin: 15px auto;
     }
     .card {
         padding: 0px;
@@ -242,10 +242,11 @@ body {
     .btn,
     :visited {
         left: 50px;
-        bottom: 60px;
+        transform: translateX(-50%, -50%);
+        bottom: 40px;
         font-weight: 500;
         font-size: 24px;
-        padding: 20px 35px;
+        padding: 15px 30px;
     }
     .copyright {
         margin: 2rem 0;
