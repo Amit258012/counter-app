@@ -170,8 +170,8 @@ body {
 /* Media query */
 @media screen and (max-width: 480px) {
     .container {
-        height: 80vh;
-        margin: 15px auto;
+        height: 100vh;
+        margin: 5px auto;
     }
     .card {
         padding: 0px;
@@ -203,7 +203,8 @@ body {
     }
     .remaining {
         top: 130px;
-        left: 55px;
+        left: 45px;
+
         font-weight: 600;
         font-size: 36px;
     }
@@ -222,7 +223,7 @@ body {
     }
     .per-day {
         top: 300px;
-        left: 50px;
+        left: 30px;
         font-weight: 600;
         font-size: 30px;
     }
@@ -231,12 +232,12 @@ body {
     }
     .day-left {
         top: 380px;
-        left: 50px;
+        left: 30px;
         font-weight: 600;
         font-size: 30px;
     }
     .day-left span {
-        font-size: 45px;
+        font-size: 36px;
     }
     .btn:link,
     .btn,
@@ -249,7 +250,7 @@ body {
         padding: 15px 30px;
     }
     .copyright {
-        margin: 2rem 0;
+        text-align: center;
         font-size: 14px;
     }
 }
